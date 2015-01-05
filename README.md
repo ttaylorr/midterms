@@ -23,6 +23,11 @@ environment on your system.  To install a package, simply run `tlmgr install
 The necessary packages to process all the doucments are listed below:
 
 - [mhchem](http://www.ctan.org/pkg/mhchem) - typeset chemical formulae/equations
+- [qtree](http://www.essex.ac.uk/linguistics/external/clmt/latex4ling/trees/qtree/)
+  - tree-drawing macros using bracketed notation
+- [siunitx](http://www.ctan.org/pkg/siunitx) - typestting for scientifically
+  notated values
+- [booktabs](http://www.ctan.org/pkg/booktabs) - typesetting for tables
 
 ## Compilation
 
