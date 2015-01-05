@@ -24,6 +24,18 @@ The necessary packages to process all the doucments are listed below:
 
 - [mhchem](http://www.ctan.org/pkg/mhchem) - typeset chemical formulae/equations
 
+## Compilation
+
+PDF generation is done with [rubber](https://launchpad.net/rubber/), which can
+be easily installed on OS X with homebrew.  To install, simply execute `brew
+install rubber` in your shell.  Alternatively, you can download and compile the
+source yourself, and then use `brew link` to link up the generated binaries in
+your `bin/`.
+
+To make all of this easy, there is a built in `rake` task that automates the
+compilation of all `*.tex` files in each sub-directory.  That task is marked as
+"default", so to run and compile, just hit `rake` in your shell.
+
 ## License
 
 MIT
