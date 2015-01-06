@@ -28,6 +28,7 @@ The necessary packages to process all the doucments are listed below:
 - [siunitx](http://www.ctan.org/pkg/siunitx) - typestting for scientifically
   notated values
 - [booktabs](http://www.ctan.org/pkg/booktabs) - typesetting for tables
+- [float](http://www.ctan.org/pkg/float) - improved defaults for tables in LaTeX
 
 ## Compilation
 
