@@ -1,0 +1,155 @@
+\chapter{Equations and Analysis}
+\section{Introduction}
+\subsection{Topics}
+\begin{enumerate}
+  \item Mass relationships
+  \item Limiting and excess reagents
+  \item Percent yield
+  \item Chemical analysis
+  \item Concentration and solution stoichiometry
+  \item Spetctrophotometry
+  \item Oxidation-reduction reactions
+\end{enumerate}
+
+\section{Stoichiometry}
+Stoichiometry involves the use of a balanced chemical equations to determine
+the relationship between similar properties of two seperate substances in an
+equation. Properties that can be measured using this technique include mass,
+volume, moles, pressure, and concentration.
+
+\subsection{Problem Solving}
+To solve a problem using stoichometry, implement the following technique:
+\begin{enumerate}
+  \item Write a balanced equation
+  \item Convert the given information into moles
+  \item Use the mole ratio to convert between different substances
+  \item Take the mole amount of the unknown and convert into a different unit
+\end{enumerate}
+
+An example of this technique in action follows below:
+
+First, a chemical equation is written.\\
+\ce{CH4 + 2O2 -> CO2 + 2H2O}\\
+
+We are trying to find the amount of \ce{CO2} produced from \SI{50}{\gram} of
+\ce{CH4}.
+
+$$\left(\frac{\SI{50}{\gram} \ce{CH4}}{1}\right)\left(\frac{\SI{1}{\mol}
+\ce{CH4}}{\SI{16.04}{\gram}}\right)\left(\frac{\SI{1}{\mol} \ce{CO2}}{\SI{1}{\mol}
+\ce{CH4}}\right)\left(\frac{\SI{44.01}{\gram} \ce{CO2}}{\SI{1}{\mol}
+\ce{CO2}}\right) = \SI{137}{\gram} \ce{CO2}$$
+
+\section{Limiting Reactants}
+Sometimes, an excess of one reactant is present as compared to a limiting
+amount of another reactant. For example, if you a grilling hot-dogs and there
+are 10 dogs per package, but only 8 buns per package, the buns are the limiting
+"reagent."
+
+To solves these types of problems, do the stoichometry both ways and see which
+can produce less of the same product. Whichever reactant you started with is the
+limiting reagent.
+
+An example is shown below:\\
+
+\textit{\SI{100.}{\gram \ce{Xe}} reacts with \SI{100.}{\gram \ce{F2}} to produce
+\ce{XeF6}}\\
+
+\ce{Xe + 3F2 -> XeF6}\\
+
+Starting with \SI{100.}{\gram \ce{Xe}}:
+$$\left(\SI{100.}{\gram \ce{Xe}}\right)\left(\frac{\SI{1}{\mol
+\ce{Xe}}}{\SI{131.29}{\gram \ce{Xe}}}\right)\left(\frac{\SI{1}{\mol
+\ce{XeF6}}}{\SI{1}{\mol \ce{Xe}}}\right)\left(\frac{\SI{245.28}{\gram
+\ce{XeF6}}}{\SI{1}{\mol \ce{XeF6}}}\right) = \SI{187}{\gram \ce{XeF6}}$$
+
+Starting with \SI{100.}{\gram \ce{F2}}:
+$$\left(\SI{100.}{\gram \ce{F2}}\right)\left(\frac{\SI{1}{\mol
+\ce{F2}}}{\SI{38.00}{\gram \ce{F2}}}\right)\left(\frac{\SI{1}{\mol
+\ce{XeF6}}}{\SI{3}{\mol \ce{F2}}}\right)\left(\frac{\SI{245.28}{\gram
+\ce{XeF6}}}{\SI{1}{\mol \ce{XeF6}}}\right) = \SI{215}{\gram \ce{XeF6}}$$
+
+We can determine that \SI{100.}{\gram \ce{Xe}} is the limiting reagent since it
+produces less \ce{XeF6}.
+
+\section{Chemical Analysis}
+\subsection{Identifying impurities}
+
+Most impurity problems deal with finding the amount of some substance present in
+a solution when we know information about how that solution reacts with yet
+another substances. From this, we can obtain two equations, and do stoichometry
+between the two in order to determine how much of the original substance is
+present in the solution.
+
+An example problem follows:\\
+
+\textit{a \SI{275}{\gram} of impure water is treated with dilute \ce{H2CO3}
+  solution to test for the presence of calcium chloride. After filtration,
+\SI{0.0034}{\gram \ce{CaCO3}} is collected. Determine the mass percentage of
+\ce{CaCl2} in the water sample, assuming all of the calcium present is in the
+form of \ce{CaCl2}.}\\
+
+\ce{Ca^2+ + CO3^2- -> CaCO3}\\
+\ce{CaCl2 -> Ca^2+ + 2Cl-}\\
+
+Stoichometry is done to convert between \ce{CaCO3} and the mass amount of
+\ce{CaCl2}. A mass percent is then obtained using the formula from the previous
+chapter.
+
+\subsection{Identifying hydrocarbons}
+A hydrocarbon comes in the form \ce{C_xH_y} or \ce{C_xH_yO_z}. Hydrocarbons can
+be easily identified using the above processes when undergoing combustion. The
+problem-solving technique is outlined below:
+
+\begin{enumerate}
+  \item Determine the hydrocarbon.
+  \item Combust it, and write a balanced chemical equation (\ce{CO2} and
+    \ce{H2O} are always produced).
+  \item Use the amount of \ce{CO2} to determine how much \ce{C} the hydrocarbon
+    contained.
+  \item Use the amount of \ce{H2O} produced to determine how much \ce{H} is
+.    contained in the hydrocarbon.
+  \item Use the mass of the hydrocarbon subtracting away the mass of the \ce{C}
+    and \ce{H} to determine the mass of \ce{O} left over.
+\end{enumerate}
+
+An example is shown below:
+
+\textit{ex. \SI{14.75}{\gram} of a hydrocarbon with the formula \ce{C_xH_yO_z}
+  is combusted. After combustion, \SI{24.1981}{\gram} \ce{CO2} and \SI{9.9055}{\gram} \ce
+{H2O} remain. Determine the emperical formula of the hydrocarbon.}
+
+Carbon analysis: \ce{CO2 -> C + 2O}
+
+$$(\SI{24.1981}{\gram \ce{CO2}})\left(\frac{\SI{1}{\mol
+\ce{CO2}}}{\SI{44.04}{\gram \ce{CO2}}}\right)\left(\frac{\SI{1}{\mol
+\ce{C}}}{\SI{1}{\mol \ce{CO2}}}\right) = \SI{.550}{\mol \ce{C}}$$
+
+Hydrogen analysis: \ce{H2O -> 2H + O}
+
+$$(\SI{9.9055}{\gram \ce{H2O}})\left(\frac{\SI{1}{\mol
+\ce{H2O}}}{\SI{18.01}{\gram \ce{H2O}}}\right)\left(\frac{\SI{2}{\mol
+\ce{H}}}{\SI{1}{\mol \ce{H2O}}}\right) = \SI{1.10}{\mol \ce{H}}$$
+
+Oxygen analysis:
+
+$$\SI{14.75}{\gram} - (\SI{6.60}{\gram \ce{C}} + \SI{1.11}{\gram \ce{H}}) =
+\SI{7.04}{\gram \ce{O}}$$
+
+Then use the tactic outlined in the previous chapter to determine the emperical
+formula by simplifying the molar ratio obtained above.
+
+Following these steps, the unknown hydrocarbon is: \ce{C5H10O4}.
+
+\section{Percent Yield}
+\begin{equation}
+  \text{percent yield} = \frac{\text{actual yield}}{\text{theoretical
+  yield}}(100)
+\end{equation}
+
+\begin{description}
+  \item[Theoretical yield] the amount of product obtained by stoichometric
+    ratios.
+  \item[Actual yield] the amount of product collected from an experiment.
+\end{description}
+
+This is not the same as percent error.
