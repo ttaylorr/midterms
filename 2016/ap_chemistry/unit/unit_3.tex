@@ -1,0 +1,243 @@
+\chapter{Gas Laws}
+\section{Introduction}
+\subsection{Topics}
+\begin{enumerate}
+  \item Properties
+  \item Pressure: derivation of, units
+  \item Boyle's, Charles's, Gay-Lussac's, Avogadro's laws
+  \item Combined, Ideal, Dalton, graham, van der Waals's Laws
+  \item Kinetic molecular theory
+  \item Stoichiometry
+\end{enumerate}
+
+\section{Properties}
+Gas has many unique properties not observable in solids and liquids. Because of
+these extra properties, it is useful to be able to talk more in detail about the
+properties of gas.
+
+\begin{description}
+  \item[Macroscale] Pressure, volume, temperature, number of particles
+  \item[Microscale] Intermolecular forces, velocity, kinetic energy, size of
+    particles
+\end{description}
+
+\subsection{Pressure}
+Pressure deals with the force of an impact over the surface area impacted. Gas
+molecules are constantly in motion and continuously collide with the walls of
+the container they are placed in. These collisions impart a force on the
+container, and thus pressure is created.
+
+Pressure is measured in $atm$, $bar$, $pa$, $mmHg$, $torr$, and $psi$. We
+usually use $atm$, $pa$, $mmHg$, and $torr$.
+
+\subsubsection{Measuring Pressure}
+\begin{enumerate}
+  \item A glass tube containing a vacuum is placed atop a bowl of liquid, such
+    as \ce{Hg}.
+  \item Liquid is pushed up the tube.
+  \item The higher the air pressure, the more the liquid moves.
+\end{enumerate}
+
+\section{Gas Laws}
+\subsection{Boyle's Law}
+\begin{description}
+  \item[Description] Boyle's law relates the amount of pressure and volume in
+    two containers of gasses.
+  \item[Constants] Amount of gas particles, temperature.
+  \item[Units] Pressure and volume have to be consistent units, but can be
+    anything as long as it makes sense.
+\end{description}
+
+\begin{equation}
+  PV=k
+\end{equation}
+
+\begin{equation}
+  P_1V_1=P_2V_2
+\end{equation}
+
+\subsection{Charles's Law}
+\begin{description}
+  \item[Description] Charles's law describes the relationship between
+    temperature and volume.
+  \item[Constants] Pressure and amount of gas present.
+  \item[Units] Volume must be self-consistent between the two sides of the
+    equation. Temperature must be on an absolute scale, such as Kelvin.
+\end{description}
+
+\begin{equation}
+  \frac{V}{T}=k
+\end{equation}
+
+\begin{equation}
+  \frac{V_1}{T_1}=\frac{V_2}{T_2}
+\end{equation}
+
+\subsection{Combined Gas Law}
+\begin{description}
+  \item[Description] Relates the amount of pressure, volume, and temperature.
+  \item[Constants] Amount of gas present.
+  \item[Units] Pressure and volume must be self consistent. Temperature must be
+    on an absolute scale, such as Kelvin.
+\end{description}
+
+\begin{equation}
+  \frac{P_1V_1}{T_1}=\frac{P_2V_2}{T_2}
+\end{equation}
+
+\subsection{Avagadro's Law}
+\begin{description}
+  \item[Description] Said that only the number of gas molecules is important in
+    determining volume.
+  \item[Constants] Pressure and temperature of the gas.
+  \item[Units] Volume must be self consistent, $n$ must be in $mol$s.
+\end{description}
+
+\begin{equation}
+  \frac{V_1}{n_1}=\frac{V_2}{n_2}
+\end{equation}
+
+
+\subsection{Ideal Gas Law}
+\begin{description}
+  \item[Description] Based on theories put forth by Avagadro that volume and
+    number of particles are proportional. Combines all other gass laws.
+  \item[Constants] None.
+  \item[Units] Pressure and volume may be any self-consistent units. Temperature
+    must be on an absolute scale, such as Kelvin. $n$ must be in $mol$s.
+\end{description}
+
+\begin{equation}
+  PV=nRT
+\end{equation}
+
+\begin{equation}
+\begin{split}
+  PV & =nRT\\
+  PV & =\frac{m}{M}RT\\
+  PM & =\frac{m}{V}RT\\
+  & =DRT\\
+  D & =\frac{PM}{RT}
+\end{split}
+\end{equation}
+
+\section{Stoichionetry}
+
+Avogadro's law can be applied to stoichiometry so that the mole ratio in a gas
+equation can also describe the volume ratio of gases in an equation. This is the
+Law of Combining Volumes.
+
+An example of the above equations is shown below:
+
+\textit{Find the volume of hydrogen needed to react completely with
+\SI{17.5}{\liter} of \ce{N2(g)} at \SI{300.0}{\kelvin} and 1.25atm.}
+
+\ce{N2(g) + 3H2(g) -> 2NH3(g)}
+
+\begin{equation}
+\begin{split}
+  n_{\ce{N2}} &= V\left(\frac{P}{RT}\right)\\
+  V_{\ce{H2}} &= n\left(\frac{RT}{P}\right)\\
+\end{split}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+  V_{\ce{H2}} &= 3n_{\ce{N2}}\left(\frac{RT}{P}\right)\\
+  &= 3V_{\ce{N2}}\left(\frac{P}{RT}\right)\left(\frac{RT}{P}\right)\\
+  &= 3V_{\ce{N2}}
+\end{split}
+\end{equation}
+
+\subsection{Standard Temperature and Pressure}
+If temperature is at $273.15K$ and pressure is equal to $1.00atm$, then $1mol$
+of gas is $22.41L$ of volume.
+
+\section{Mixtures}
+\subsection{Dalton's Law (Partial Pressures)}
+If a mixture is composed of all gases, and the pressure of said mixture is equal
+to $P$, then the following can be stated:
+
+\begin{equation}
+\begin{split}
+  P_{total} &= \sum_{i=1}^{n} P_i\\
+  &= P_1 + P_2 + P_3 + \ldots + P_n
+\end{split}
+\end{equation}
+
+Since molar fractions apply here, we can calculate the mol. fraction of a given
+substance to be:
+
+\begin{equation}
+  X_a=\frac{\text{mol}_A}{\text{mol}_{total}}
+\end{equation}
+
+and use that relationship to obtain the following:
+
+\begin{equation}
+  P_a=X_a\sum_{i=1}^{n}P_i
+\end{equation}
+
+\begin{equation}
+  P_{total} = \sum_{i=1}^{n} X_iP_t
+\end{equation}
+
+\section{Kinetic Molecular Theory}
+\begin{enumerate}
+  \item Gas molecules are far apart from each other, s.t. gases are mostly empty
+    space.
+  \item Gas molecules have continuous, rapid motion. They collide elastically
+    with each other and the walls of the container.
+  \item Kinetic energy is proportional to temperature. All gases at the same
+    temperature have the same kinetic energy, regardless of their mass.
+\end{enumerate}
+
+\subsection{Root-mean-square Speed}
+In a sample of lots of gas particles, a range of energies may be found. To
+determine the average speed of the particles over the entire sample, the
+root-mean-squared speed is calculated.
+
+Here, $R$ represents the gas constant, $T$ is temperature in Kelvin, and $M$ is
+the molar mass in $kg/mol$.
+
+\begin{equation}
+  v_{rms} = \sqrt{\frac{3RT}{M}}
+\end{equation}
+
+\subsection{Movement}
+\begin{description}
+  \item[Diffusion] mixing of gas molecules
+  \item[Effusion] movement of gas from one container through a
+    (atomically-sized) hole.
+\end{description}
+
+\subsubsection{Graham's Law}
+\begin{equation}
+  \frac{\text{rate}_a}{\text{rate}_b} = \sqrt{\frac{M_b}{M_a}}
+\end{equation}
+
+\section{Non-ideal gases}
+Gases begin to deviate from the ideal behavior defined above in a few different
+conditions:
+
+\begin{enumerate}
+  \item High pressure and/or small volumes. In this case, it is no longer
+    correct to assume that gases are mostly empty space.
+  \item At low temperatures, the attractive forces between gas particles becomes
+    noticable, and they become "sticky".
+\end{enumerate}
+
+\subsection{van der Waals equation}
+The van der Waals equation is essentially the Ideal Gas Law with a few
+correction factors thrown in. These factors are described below:
+
+\begin{description}
+  \item[$a$] the intermolecular forces between gas particles
+  \item[$b$] the volume of the gas molecules themselves
+\end{description}
+
+These values will always be given in a problem.
+
+\begin{equation}
+  \left(P-a\left[\frac{n}{V}\right]^2\right)\left(V-nb\right) = nRT
+\end{equation}
