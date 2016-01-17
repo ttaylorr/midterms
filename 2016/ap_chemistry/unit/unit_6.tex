@@ -1,0 +1,248 @@
+\chapter{Thermodynamics}
+\section{Introduction}
+\subsection{Topics}
+\begin{enumerate}
+  \item Forms of energy
+  \item Heat and temperature
+  \item Heat transfer
+  \item Work
+  \item Calorimetry
+  \item Heats of reaction
+  \item Hess's Law
+  \item Standard enthalpy of formation
+  \item Entropy
+  \item Gibbs free energy
+\end{enumerate}
+
+\section{Forms of Energy}
+\begin{description}
+  \item[Kinetic Energy] energy of motion of a particular object
+    \begin{description}
+      \item[Thermal] energy of molecular motion
+      \item[Mechanical energy] energy of macroscopic objects in motion
+      \item[Electrical] motion of electrons
+    \end{description}
+  \item[Potential Energy] energy of the position of a particular object
+    \begin{description}
+      \item[Chemical] energy stored in bonds
+      \item[Gravitational] attraction due to position relative to another
+        object
+      \item[Electrostatic] Couloumb's law
+    \end{description}
+\end{description}
+
+\section{Temperature and Heat}
+\begin{description}
+  \item[Heat] the total thermal energy content of a sample. This depends on the
+    amount of motion and the number of particles present.
+  \item[Temperature] Teh average kinetic energy of the particles in a sample.
+    This amount is independent of the sample size.
+\end{description}
+
+\subsection{Heat Transfer}
+Heat is always transferred from hot objects to cold objects. This occurs because
+collisions between molecules can transfer energy from one energy to another.
+
+Equilibrium is reached when the two objects have the same average kinetic
+energy.
+
+\begin{description}
+  \item[Exothermic] Heat is transferred from a system to the surroundings.
+  \item[Endothermic] Heat is transferred from the surroundings to the system.
+\end{description}
+
+\subsubsection{Energy Units}
+\begin{description}
+  \item[Joule] The standard metric for energy and work
+  \item[cal] 1 cal will increase the temperature of \SI{1}{\gram} of \ce{H2O} by
+    \SI{1}{\degreeCelsius}
+\end{description}
+
+\subsection{Energy transfer}
+\begin{description}
+  \item[Description] Equation to calculate the change in energy of a
+    non-reactive system undergoing no phase-change(s).
+  \item[Units] $q$ is in \SI{}{\joule}, $m$ is in mass or moles, $C$ is specific
+    heat in mass or moles, consistent with the units of $m$. $t$ is the
+    temperature change.
+\end{description}
+\begin{equation}
+  q=mc\Delta T
+\end{equation}
+
+\begin{description}
+  \item[Description] Equation to calculate the energy change of a non-reactive
+    system at a phase change.
+  \item[Units] $q$ is in \SI{}{\joule}, $m$ \SI{}{\mol}, $\Delta H$ is a heat of
+    fusion.
+\end{description}
+\begin{equation}
+  q=n\Delta H
+\end{equation}
+
+\begin{description}
+  \item[Description] Law of conservation of energy.
+\end{description}
+\begin{equation}
+  \sum_{i=1}^{n} q_i = 0
+\end{equation}
+
+\subsection{Other forms of energy}
+In a piston, for example, work is converted from natural processes like the
+expansion of gas into useful work. The equation governing this action is
+displayed below.
+
+\begin{equation}
+  \Delta U = q + w
+\end{equation}
+
+Work causes some macroscopic motion against a resistance. The work referred to
+in the above example is pressure-volume work, because the "work" is the
+expansion of gas. These types of processes are goverened by:
+
+\begin{equation}
+  W = -P\Delta V
+\end{equation}
+
+\begin{table}[]
+\centering
+\begin{tabular}{lll}
+Heat transferred to system from surroundings & $q > 0$ & $\Delta E > 0$ \\
+Heat transferred from system to surroundings & $q < 0$ & $\Delta E < 0$ \\
+Work done on system by surroundings          & $w > 0$ & $\Delta E > 0$ \\
+Work done by system on surroundings          & $w < 0$ & $\Delta E < 0$
+\end{tabular}
+\end{table}
+
+\section{Calorimetry}
+Calorimetry is an experimental procedure used to measure energy changes.
+Experiments are preformed either at constant pressure or at constnat volume.
+Constant volume is referred to as bomb calorimetry. Constant pressure is
+referred to as "coffee cup" calorimetry.
+
+\begin{equation}
+  q_{rxn} + q_{bomb} + q_{\ce{H2O}} = 0
+\end{equation}
+
+$q_{bomb}$ refers to the energy released in the reaction that heats the
+calorimeter itself. The calorimeter has the same $\Delta T$ as the surrounding
+water. The value of $m$ is not included in this calculation because the value of
+$C_{bomb}$ already takes it into account.
+
+\begin{equation}
+  q_{bomb} = C_{bomb}\Delta T
+\end{equation}
+
+\section{Hess's Law}
+Hess's Law is used to calculate the enthalpy of a reaction when subcomponents of
+the reaction's enthalpy are known, but the original equation's enthalpy is not.
+It takes advantage that enthalpy, being an energy, is a state function. An
+example is shown below:
+
+\textit{ex. \ce{N2} and \ce{O2} combined to form \ce{N2O5}.}\\
+\ce{N2 + 2O2 -> N2O4} \SI{800}{\kilo\joule\per\mol}\\\\
+
+\ce{N2 + O2 -> N2O2} \SI{-200}{\kilo\joule\per\mol} released\\
+\ce{N2O2 + O2 -> N2O4} \SI{1000}{\kilo\joule\per\mol} released\\
+\SI{800}{\kilo\joule\per\mol} released
+
+\subsection{Equation Manipulations}
+\begin{enumerate}
+  \item The coefficients of a reaction may be changed by multiplying the entire
+    equation by a scalar.
+  \item However, if the scalar is negative, the reaction must first be reversed
+    such that the products become the reactants, and vice-versa.
+\end{enumerate}
+
+\section{Standard Heats of Formation}
+\begin{equation}
+  \Delta H^{\circ}_{rxn} = \sum_{i=1}^{n} n_i\Delta H^{\circ}_{\text{products}} -
+  \sum_{i=1}^{n} n_i\Delta H^{\circ}_{\text{reactants}}
+\end{equation}
+
+\section{Spontaneous Reactions}
+Spontaneous reactions occur without outside intervention. It does not detail how
+fast a reaction will occur, or how much product will be formed, but it tells you
+whether or not a reaction will occur.
+
+\begin{description}
+  \item[Product-favored] reactions that contain mostly products at the end
+    (therefore having a high percent-yield).
+  \item[Reactant-favored] reactions that contain mostly reactants at the end
+    (therefore having a low percent-yield).
+\end{description}
+
+Two factors will determine whether or not a reaction is spontaneous.
+\begin{enumerate}
+  \item Heat. Processes which release heat are more likely to be spontaneous.
+    This is because these reactions do not need an outside source of energy.
+    Reactants are tapping into their own stored energy to carry out the
+    reaction. \textit{N.B.: this is not the only requirement for a reaction to
+    be spontaneous}.
+  \item Entropy. Entropy is the dispersal of matter and energy in a system.
+\end{enumerate}
+
+\section{Second Law of Thermodynamics}
+Spontanous proccesses increase the entropy, or disorder, of the universe.
+
+\begin{equation}
+\Delta S_{\text{universe}} \geq 0
+\end{equation}
+
+\section{Third Law of Thermodynamics}
+The entropy of a perfect crystalline structure will be $0$. Anything not at zero
+Kelvin will have a positive value of entropy.
+
+\begin{equation}
+  \Delta S = \frac{q}{T}
+\end{equation}
+
+The change in entropy for a spontaneous process may be positive or negative, but
+it is more likely to be positive if the process is spontaneous.
+
+\section{Examples of Entropy Change}
+\begin{description}
+  \item[Change of state] Gases have far greater entropy values than liquids,
+    which are somewhat greater than solids.
+  \item[Change of temperature] Objects at low temperature have lower entropy
+    than objects at high temperature.
+  \item[Mixing substances] Pure substances have lower entropy than substances
+    that are mixtures.
+  \item[Molecules] Fewer molecules have less entropy than many molecules.
+\end{description}
+
+\begin{equation}
+  \Delta S^{\circ}_{rxn} = \sum_{i=1}^{n} n_i\Delta S^{\circ}_{\text{products}} -
+  \sum_{i=1}^{n} n_i\Delta S^{\circ}_{\text{reactants}}
+\end{equation}
+
+\begin{equation}
+  \begin{aligned}
+    \Delta S^{\circ}_{\text{surroundings}} &= \frac{q_{\text{surroundings}}}{T}\\
+    &= \frac{-\Delta H^{\circ}_{\text{system}}}{T}
+  \end{aligned}
+\end{equation}
+
+\section{Gibbs Free Energy}
+Also referred to as Helmmholtz Free Energy, this value takes into consideration
+both enthalpy and entropy changes to determine whether or not a reaction will be
+spontaneous. The "free" energy is the energy that is available to do work.
+
+The sign on $\Delta G$ tells us whether or not the reaction will be spontaneous
+(positive values are, negative ones aren't).
+
+\begin{equation}\begin{aligned}
+  \Delta G &= \sum_{i=1}^{n} n_i\Delta G^{\circ}_{\text{products}} -
+              \sum_{i=1}^{n} n_i\Delta G^{\circ}_{\text{reactants}}\\
+           &= \Delta H - T\Delta S
+\end{aligned}\end{equation}
+
+\begin{table}[]
+\centering
+\begin{tabular}{l|l|l|}
+\cline{2-3}
+ & \textbf{\begin{tabular}[c]{@{}l@{}}$\Delta S > 0$\\ Disorder favored\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}$\Delta S < 0$\\ Order not favored\end{tabular}} \\ \hline
+\multicolumn{1}{|l|}{\textbf{\begin{tabular}[c]{@{}l@{}}$\Delta H > 0$\\ Endothermic disfavored\end{tabular}}} & \begin{tabular}[c]{@{}l@{}}$\Delta G < 0$ if $T\Delta S > \Delta H$\\ Process is entropically driven.\end{tabular} & $\Delta G > 0$ \\ \hline
+\multicolumn{1}{|l|}{\textbf{\begin{tabular}[c]{@{}l@{}}$\Delta H < 0$\\ Exothermic favorable\end{tabular}}} & $\Delta G < 0$ & \begin{tabular}[c]{@{}l@{}}$\Delta G > 0$ when $\left|\Delta H\right| > \left|T\Delta S\right|$\\ Process is enthalpically driven.\end{tabular} \\ \hline
+\end{tabular}
+\end{table}
