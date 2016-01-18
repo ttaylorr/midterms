@@ -1,0 +1,410 @@
+\chapter{Unit 1}
+\section{Plane Curves \& Parametrics}
+\subsection{Definition}
+Typically, functions come in rectangular form, meaning $x$ is the independent
+variable, and $y$ is dependent upon it. These functions look recognizable:
+$y=\ln(x)$.
+
+To track more things, or place a function into a seperate independent variable,
+parametrics are used. When using parametrics, one function is given for every
+graphed dimension. For example: $x=f(t)$, $y=f(t)$ or $x=f(\theta)$,
+$y=f(\theta)$.
+
+In the above example, $x(t)$ and $y(t)$ are the parametric equations and $t$ is
+the parameter. The set of points $(x, y)$ obtained as $t$ varries over the
+interval on which it is defined, is the graph of the parametric equation.
+
+\subsection{De-parameterizing}
+\begin{description}
+  \item[Table] A table of values can be created where $t$ varries independently,
+    and $(x(t), y(t))$ are the output values.
+  \item[Algebraic Simplification] $x(t)$ can be simplified in terms of $y$ and
+    substituted back into $y(t)$ to obtain a function.
+  \item[Trigonometric Simplification] Trigonometric identities (such as
+    $\sin^2\theta + \cos^2\theta = 1$, etc.) may be used to simplify the
+    parameter functions.
+\end{description}
+
+\subsection{Parameterizing}
+To obtain the parametric curve of the rectangular equation, the
+following process is implemented:
+
+\begin{enumerate}
+  \item Let $x(t) = t$, and write $y(t)$ in terms of $x(t)$.
+  \item Write both $x$ and $y$ in terms of $t$ and $m=\frac{dy}{dx}$.
+\end{enumerate}
+
+An example is shown below for the curve $y=1-x^2$:
+
+\begin{align*}
+  x(t) &= t\\
+  y(t) &= 1-x^2\\
+       &= 1-t^2\\\\
+  m &= \frac{dy}{dx}=-2x\\\\
+  x &= \frac{-m}{2}\\\\
+  y &= 1-x^2\\
+    &= 1-(\frac{-m}{2})^2\\
+    &= 1-\frac{m^2}{4}
+\end{align*}
+
+\section{Parametric Equations and Calculus}
+\subsection{The Derivative}
+Suppose a parametric equation is given $x=f(t)$ and $y=g(t)$. The slope of that
+equation is given to be:
+\begin{equation}
+  \frac{dy}{dx}=\frac{\frac{dy}{dt}}{\frac{dx}{dt}}
+\end{equation}
+
+The second derivative, therefore, of a parametric curve is given to be:
+\begin{equation}\begin{aligned}
+  \frac{d^2y}{dx^2} &=
+  \frac{d}{dx}\left(\frac{\frac{dy}{dt}}{\frac{dx}{dt}}\right)\\
+  &= \frac{d}{dx}\left(\frac{dy}{dx}\right)
+\end{aligned}\end{equation}
+
+\subsection{Arc Length}
+Recall that the formula for arc length of a curve $h(x)$ over $[x_o, x_1]$ is:
+\begin{equation}
+  S = \int_{x_0}^{x_1} \sqrt{1+\left[h'(x)\right]^2} dx\\
+\end{equation}
+
+Therefore making the arc length of a parametric curve the following:
+\begin{align*}
+  S &= \int_{x_0}^{x_1} \sqrt{1+\left[\frac{dy}{dx}\right]^2} dx\\
+    &= \int_{x_0}^{x_1} \sqrt{1+\left[\frac{dy/dt}{dx/dt}\right]^2} dx\\
+    &= \int_{x_0}^{x_1} \sqrt{\frac{(dx/dt)^2+(dy/dt)^2}{(dx/dt)^2}} dx\\
+    &= \int_{x_0}^{x_1}
+  \sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2} dx\\
+    &= \int_{x_0}^{x_1} \sqrt{[f'(t)]^2+[g'(t)]^2} dx\\
+\end{align*}
+
+\subsection{Areas of Rotation}
+The revolution about the $x$-axis is given:
+\begin{equation}
+  S=2\pi\int_a^b
+  g(t)\sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2} dt
+\end{equation}
+
+and the area about the $y$-axis is given:
+\begin{equation}
+  S=2\pi\int_a^b
+  f(t)\sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2} dt
+\end{equation}
+
+\section{Vectors in the Plane}
+Vectors are directed line segments that have no origin. Vectors have both
+magnitude, and direction, such that any vector is the same no matter where they
+start. Vectors are denoted as follows:
+$$\vec{v}=\vec{PQ}$$
+
+\subsection{Magnitude}
+The magnitude of a vector $\vec{v}$ with the components $\langle x,y\rangle$ may
+be calculated as follows:
+\begin{equation}
+  ||\vec{v}||=\sqrt{x^2+y^2}
+\end{equation}
+
+\subsection{Operations}
+Let $\vec{u}=\langle u_1,u_2\rangle$ and $\vec{v}=\langle v_1,v_2\rangle$.
+\begin{enumerate}
+  \item The vector sum of $\vec{u}$ and $\vec{v}$ is $\langle u_1+v_1, u_2+v_2
+    \rangle$.
+  \item The scalar multiple of $c$ and $\vec{v}$ is $\langle cv_1, cv_2
+    \rangle$.
+  \item The negative of $\vec{v}$ is $\langle -v_1, -v_2 \rangle$.
+  \item The difference of $\vec{u}$ and $\vec{v}$ is $\langle u_1-v_1, u_2-v_2
+    \rangle$.
+\end{enumerate}
+
+To take the unit vector of a vector $\vec{v}$ in its direction, then the
+following is calculated:
+\begin{equation}
+  \vec{u}=\frac{\vec{v}}{||\vec{v}||}=\frac{1}{||\vec{v}||}\vec{v}
+\end{equation}
+
+There are three standard unit vectors in $\mathbb{R}^3$ space:
+\begin{description}
+  \item[$\hat{i}$] = $\langle 1,0,0 \rangle$
+  \item[$\hat{j}$] = $\langle 0,1,0 \rangle$
+  \item[$\hat{k}$] = $\langle 0,0,1 \rangle$
+\end{description}
+
+\subsection{Space Coordinates and Vectors in Space}
+Points in the $\mathbb{R}^2$ plane have coordinates of the form $(x,y)$. Points
+in the $\mathbb{R}^3$ space have coordinates of the form $(x,y,z)$.
+
+The distance between two such points takes the following form:
+\begin{equation}
+  d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}
+\end{equation}
+
+Vectors in $\mathbb{R}^2$ take the form $\langle x,y,z \rangle$. All of the same
+properties of vectors defined in $\mathbb{R}^2$ space apply here as well.
+
+\section{The Dot Product}
+The dot product determines information about the angle between two vectors. The
+dot producted is calculated between two vectors $\vec{u}=\langle u_1,u_2
+\rangle$ and $\vec{v}=\langle v_1,v_2 \rangle$ as follows:
+
+\begin{equation}
+  \vec{u} \cdot \vec{v} = u_1v_1 + u_2v_2
+\end{equation}
+
+\subsection{The Angle Between Two Vectors}
+The dot product gives information about the angle between two non-zero vectors.
+The following theorem is presented:
+\begin{equation}
+  \cos\theta = \frac{\vec{u}\cdot\vec{v}}{||\vec{u}||||\vec{v}||}
+\end{equation}
+
+\subsection{Direction Cosines}
+The dot product can also be used to determine the angle between a vectors
+components in $\mathbb{R}^3$ space and their respective planes of interest. For
+example, for the vector $\vec{v} = \langle v_1,v_2,v_3 \rangle$, we can
+determine the angle between each planar axis and the components of the vector.
+
+The process is outlined below:
+\begin{enumerate}
+  \item Take the dot-product of a vector and a unit vector of magnitude $1$ in
+    that plane (i.e., $\hat{i}$, $\hat{j}$, or $\hat{k}$).
+  \item Apply the definition of the dot-product to determine the direction
+    cosine.
+\end{enumerate}
+
+\begin{align}
+  \cos\alpha &= \frac{v_1}{||\vec{v}||}\\
+  \cos\beta  &= \frac{v_2}{||\vec{v}||}\\
+  \cos\gamma &= \frac{v_3}{||\vec{v}||}
+\end{align}
+
+\subsection{Projections}
+To project $\vec{u}$ onto $\vec{v}$ is to take the length of $\vec{u}$ in the
+direction of $\vec{v}$. The notation is as follows below:
+
+\begin{equation}
+  \text{proj}_{\vec{v}}\vec{u}=
+  \left(\frac{\vec{u}\cdot\vec{v}}{||\vec{v}||^2}\right)\vec{v}
+\end{equation}
+
+\subsubsection{Work}
+\begin{align}
+  W &= ||\text{proj}_{\vec{PQ}}\vec{F}||||\vec{PQ}|| \\
+    &= \vec{F} \cdot \vec{PQ}
+\end{align}
+
+\section{The Cross Product}
+Let $\vec{u}=\langle u_1,u_2,u_3 \rangle$ and $\vec{v}=\langle v_1,v_2,v_3
+\rangle$. The cross product of $\vec{u}$ and $\vec{v}$ is said to be:
+\begin{equation}
+  \vec{u}\times\vec{v} = (u_2v_3-u_3v_2)\hat{i} - (u_1v_3-u_3v_1)\hat{j} +
+  (u_1v_2-u_2v_1)\hat{k}
+\end{equation}
+
+Another way to calculate the cross product is with matricies:
+
+\begin{equation}
+  \begin{aligned}
+    \vec{u}\times\vec{v} &= \begin{vmatrix}
+      \hat{i} & \hat{j} & \hat{k} \\
+      u_1     & u_2     & u_3 \\
+      v_1     & v_2     & v_3
+    \end{vmatrix} \\
+  &= \begin{vmatrix}
+    u_2 & u_3 \\
+    v_2 & v_3 \\
+  \end{vmatrix}\hat{i} -
+  \begin{vmatrix}
+    u_1 & u_3 \\
+    v_1 & v_3 \\
+  \end{vmatrix}\hat{j} +
+  \begin{vmatrix}
+    u_1 & u_2 \\
+    v_1 & v_2 \\
+  \end{vmatrix}\hat{k}\\
+  &= (u_2v_3-u_3v_2)\hat{i} - (u_1v_3-u_3v_1)\hat{j} + (u_1v_2-u_2v_1)\hat{k}
+  \end{aligned}
+\end{equation}
+
+\subsection{Algebraic Properties}
+\begin{enumerate}
+  \item $\vec{u}\times\vec{v}=-(\vec{v}\times\vec{u})$
+  \item
+    $\vec{u}\times(\vec{v}+\vec{w})=(\vec{u}\times\vec{v})+
+    (\vec{u}\times\vec{w})$
+  \item
+    $c(\vec{u}\times\vec{v})=(c\vec{u})\times\vec{v}=\vec{u}\times(c\vec{v})$
+  \item $\vec{u}\times0=0\times\vec{u}=0$
+  \item $\vec{u}\times\vec{u}=0$
+  \item $\vec{u}\dot(\vec{v}\times\vec{w}=(\vec{u}\times\vec{v})\cdot\vec{w}$
+\end{enumerate}
+
+\subsection{Geometric Properties}
+\begin{enumerate}
+  \item $\vec{u}\times\vec{v}$ is orthagonal to both $\vec{u}$ and $\vec{v}$
+  \item $||\vec{u}\times\vec{v}||=||\vec{u}||||\vec{v}||\sin\theta$
+  \item $\vec{u}\times\vec{v}=0$ only if $\vec{u}=c\vec{v}$
+  \item $||\vec{u}\times\vec{v}||$ is the area of a parallelogram having
+    $\vec{u}$ and $\vec{v}$ as adjacent sides.
+\end{enumerate}
+
+\subsection{The Triple Scalar Product}
+\begin{equation}
+  \vec{u}\cdot(\vec{v}\times\vec{w})=\begin{vmatrix}
+    u_1 & u_2 & u_3 \\
+    v_1 & v_2 & v_3 \\
+    w_1 & w_2 & w_3
+  \end{vmatrix}
+\end{equation}
+
+\subsubsection{Geometric Properties}
+The volume of a parallelpiped with significant edges $\vec{u}$, $\vec{v}$, and
+$\vec{w}$ is defined as:
+\begin{equation}
+  \begin{aligned}
+    V &= |\vec{u}\cdot(\vec{v}\times\vec{w})| \\
+      &= ||\text{proj}_{\vec{v}\times\vec{w}}||||\vec{v}\times\vec{w}|| \\
+      &= \left|\frac
+        {\vec{u}\cdot(\vec{v}\times\vec{w})}
+        {||\vec{v}\times\vec{w}||}\right|
+        ||\vec{v}\times\vec{w}|| \\
+      &= |\vec{u}\cdot(\vec{v}\times\vec{w})|
+  \end{aligned}
+\end{equation}
+
+\section{Lines and Planes in Space}
+\subsection{Lines}
+Given a line containing the point $P(x_1,y_1,z_1)$ in space parallel to the
+vector $\vec{v}=\langle a,b,c \rangle$, the vector $\vec{v}$ is the direction
+vector and the numbers $a$, $b$, and $c$ are direction numbers. One can surmise
+that a line in space $L$ contains all points $Q(x,y,z)$ for which
+$\vec{PQ}=c\vec{v}$.
+
+\begin{equation}
+  \begin{aligned}
+    \vec{PQ} &= \langle x-x_1, y-y_1, z-z_1 \rangle \\
+             &= \langle at, bt, ct \rangle \\
+             &= t\vec{v}
+  \end{aligned}
+\end{equation}
+
+The following parametric equations are generated:
+\begin{align}
+  x=x_1+at \\
+  y=y_1+at \\
+  z=z_1+at
+\end{align}
+
+and the symmetric equation of the line can be generated by eliminating the
+parameter:
+
+\begin{equation}
+  \frac{x-x_1}{a} = \frac{y-y_1}{b} = \frac{z-z_1}{c}
+\end{equation}
+
+\subsection{Planes}
+Consider a plane in space containing the point $P(x_1,y_1,z_1)$ and
+$Q(x_2,y_2,z_2)$. There is some vector in the plane, therefore, $\vec{v}=\langle
+(x_2-x_1,y_2-y_1,x_2-z-1 \rangle$, and some other vector $\vec{n}$ such that
+$\vec{v}\cdot\vec{n}=0$. Let $\vec{n}=\langle a,b,c \rangle$.
+
+It can be said that:
+\begin{equation}
+  \begin{aligned}
+    \vec{n}\cdot\vec{PQ} &= 0\\
+    \langle a,b,c \rangle \cdot \langle x-x_1, y-y_1, z-z_1 \rangle &= 0\\
+    a(x-x_1)+b(y-y_1)+c(z-z_1) &= 0\\
+    ax+by+cz+d &= 0
+  \end{aligned}
+\end{equation}
+
+To generate the vector $\vec{n}$, it is useful to generate two vectors in the
+plane $\vec{u}$ and $\vec{v}$ and then take their cross product to obtain
+$\vec{n}$ such that $\vec{u}\times\vec{v}=\vec{n}$.
+
+The dot-product can be used to determine the angle between two planes by using
+their normal vectors $\vec{n_1}$ and $\vec{n_2}$.
+\begin{equation}
+  \cos\theta=\frac{|\vec{n_1}\cdot\vec{n_2}|}{||\vec{n_1}||||\vec{n_2}||}
+\end{equation}
+
+\subsubsection{Distance between a Point and a Plane}
+The distance $D$ between a point $Q(x_0,y_0,z_0)$ (not in the plane) and $P$ (in
+the plane with the direction numbers $A$, $B$, $C$, and $D$) is:
+\begin{equation}
+  \begin{aligned}
+    D &= ||\text{proj}_{\vec{n}}\vec{PQ}|| \\
+      &= \frac{\vec{PQ}\cdot\vec{n}}{||\vec{n}||} \\
+      &= \frac{|ax_0+by_0+cz_0+d|}{\sqrt{a^2+b^2+c^2}}
+  \end{aligned}
+\end{equation}
+
+\subsubsection{Distance between a Point and a Line}
+The distance $D$ between a point $Q$ and a line in space containing the point
+$P$ is:
+\begin{equation}
+  D = \frac{||\vec{PQ}\times\vec{u}||}{||\vec{u}||}
+\end{equation}
+
+\section{Vectored-Valued Functions}
+Vectored valued functions are functions that produced vectors ($\langle x,y,z
+\rangle$ in $\mathbb{R}^3$ space, $\langle x,y \rangle$ in $\mathbb{R}^2$ space).
+
+Vectored valued functions are denoted as follows:
+
+\begin{equation}
+  \vec{r}(t) = \langle \vec{f}(t), \vec{g}(t), \vec{h}(t) \rangle
+\end{equation}
+
+These functions are drawn as normal curves, such that each point on the curve
+$P(x,y)$ represents a vector $\vec{v} = \langle x,y \rangle$. Just like normal
+parametric curves, they have direction or orientation.
+
+The limits of these functions may be taken as follows:
+\begin{equation}
+  \lim_{x\to{a}} \vec{r}(t) =
+    \left[\lim_{x\to{a}}\vec{f}(t)\right]\hat{i} +
+    \left[\lim_{x\to{a}}\vec{g}(t)\right]\hat{j} +
+    \left[\lim_{x\to{a}}\vec{h}(t)\right]\hat{k}
+\end{equation}
+
+\section{Calculus of Vectored-Valued Functions}
+\subsection{Differentiation}
+The derivative of a vectored-valued function $\vec{r}(t)$ is given as:
+\begin{equation}
+  \vec{r}'(t)=\lim_{\Delta{t}\to{0}}
+    \frac{\vec{r}(t+\Delta{t})-\vec{r}(t)}{\Delta{t}}
+\end{equation}
+
+Such that:
+\begin{equation}
+  \vec{r}'(t) = \frac{d}{dt}\vec{f}(t) +
+                \frac{d}{dt}\vec{g}(t) +
+                \frac{d}{dt}\vec{h}(t)
+\end{equation}
+
+\subsection{Properties}
+\begin{enumerate}
+  \item $$\frac{d}{dt}[\vec{r}(t)\cdot\vec{u}(t)] = \vec{r}(t)\cdot\vec{u}'(t) +
+                                                    \vec{u}(t)\cdot\vec{r}'(t)$$
+  \item $$\frac{d}{dt}[\vec{r}(t)\times\vec{u}(t)]=\vec{r}(t)\times\vec{u}'(t) +
+                                                   \vec{u}(t)\times\vec{r}'(t)$$
+\end{enumerate}
+
+\subsection{Integration}
+The integral of a vectored-valued function $\vec{r}(t)$ is given as: (note, this
+applies to vector-valued functions in $\mathbb{R}^2$ and $\mathbb{R}^3$ for both
+definite and indefinite integrals)
+\begin{equation}
+  \int \vec{r}(t) dt = \left(\int \vec{f}(t) dt\right)\hat{i} +
+                       \left(\int \vec{g}(t) dt\right)\hat{j} +
+                       \left(\int \vec{h}(t) dt\right)\hat{k}
+\end{equation}
+
+\section{Velocity \& Acceleration}
+Let $\vec{a}(t)$, $\vec{v}(t)$ and $\vec{r}(t)$ represent the acceleration,
+velocity, and position of an object in $\mathbb{R}^2$ or $\mathbb{R}^3$
+respectively.
+\begin{equation}
+  \vec{a}(t) = \frac{d}{dt}\left[\vec{v}(t)\right]
+             = \frac{d^2}{dt^2}\left[\vec{r}(t)\right]
+\end{equation}
