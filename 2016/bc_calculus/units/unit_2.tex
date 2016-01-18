@@ -1,0 +1,168 @@
+\chapter{Unit 2}
+\section{Continuity, Intermediate Value Theroem}
+\subsection{Continuity}
+Let $f(x)$ be a function defined at $x=a$. $f$ is said to be continuous at $x=a$
+if:
+\begin{equation}
+  \lim_{x\to{a^+}} f(x) = \lim_{x\to{a^-}} f(x) = f(a)
+\end{equation}
+
+\subsection{Intermediate Value Theorem}
+Let $f(x)$ be defined over $x\in[a,b]$. Suppose that $f(a)$ and $f(b)$ both
+exist. The intermediate value theorem states that there exists a $c\in[a,b]$
+such that $f(a)<f(c)=V<f(b)$.
+
+\section{$\delta$-$\epsilon$ proofs}
+Preforming a $\delta$-$\epsilon$ proof means proving the existence of a limit
+using the $\delta$-$\epsilon$ definition of a limit. That definition follows
+below:
+
+Suppose:
+$$\lim_{x\to{c}} f(x) = L$$
+
+It can be said, therefore:
+\begin{equation}
+  |x-c|<\delta \Rightarrow |f(x)-L|<\epsilon
+\end{equation}
+
+To prove the existence of a limit using the $\delta$-$\epsilon$ definition of
+the limit, follow the process below:
+\begin{enumerate}
+  \item Write $|x-c|<\delta$ filling in known values of $c$.
+  \item Write $|f(x|-L|<\epsilon$ filling in the values of $f(x)$ in terms of
+    $x$ and $L$.
+  \item Manipulate one inequality to look like the other, and set them equal.
+  \item Determine the relationship between $\delta$ and $\epsilon$.
+  \item Reverse to prove.
+\end{enumerate}
+
+\section{Indeterminate Forms \& L'Hopital's rule}
+\subsection{Indeterminate Forms}
+When evaluating a limit, it may become impossible to continue evaluation if the
+inner-function of the limit is not defined.
+
+For limits of the form:
+$$\lim_{x\to{c}}\frac{p(x)}{q(x)}=L$$
+
+If $\frac{p(x)}{q(x)}$ is one of the following forms: $\frac{0}{0}$ or
+$\frac{\pm\infty}{\pm\infty}$, then L'Hopital's rule may be applied.
+
+L'Hopital's rule states the following for limits with indeterminate forms:
+
+\begin{equation}
+  \lim_{x\to{c}} \frac{p(x)}{q(x)} = \lim_{x\to{c}} \frac{p'(x)}{q'(x)}
+\end{equation}
+
+...and so-on and so-forth until the limit exists (so long as $\frac{p(x)}{q(x)}$
+is an indeterminate form).
+
+\section{Limits and Continuity}
+\section{Derivatives}
+The derivative of a function is another function which is valued as the set of
+instantenous rates of changes of its "parent" function. A definition follows:
+
+\subsection{Limit Definition}
+\begin{equation}
+  f'(x)=\lim_{h\to{0}} \frac{f(x+h)-f(x)}{h}
+\end{equation}
+
+\subsection{Alternate Form}
+The alternate form of the derivate follows:
+\begin{equation}
+  f'(c)=\lim_{x\to{c}} \frac{f(x)-f(c)}{x-c}
+\end{equation}
+
+\subsection{Implicit Differentation}
+Differentiate an equation with respect to one variable, and other differentials
+remain. You can move all differentials of a single kind over to one side to
+solve. An example follows below:
+
+\begin{align*}
+  x^2+y^2 &= \sin(xy)-y^2 \\
+  \frac{d}{dx}[x^2+y^2] &= \frac{d}{dt}[\sin(xy)-y^2] \\
+  2x+2y\frac{dy}{dt} &= cos(xy)\left(y+x\frac{dy}{dt}\right)-2y\frac{dy}{dt}
+\end{align*}
+
+\subsection{Average Rate of Change}
+The average rate of change gives the average rate of change of $f(x)$ on the
+interval $[a,b]$.
+\begin{equation}
+  \frac{f(b)-f(a)}{b-a}
+\end{equation}
+
+\subsection{Instantenous Rate of Change}
+The instantenous rate of change gives the rate of change at a particular point.
+\begin{equation}
+  f'(c)
+\end{equation}
+
+\subsection{Arctrig Proofs}
+Suppose $y=\arctan(x)$, therefore $y'=\frac{dx}{1+x^2}$. Prove.
+
+\begin{equation}
+\begin{aligned}
+  \tan(y) &= x \\
+  \sec^2(y)\frac{dy}{dx} &= 1 \\
+  \frac{1}{\sec^2(y)} &= \frac{dy}{dx} \\
+  \frac{1}{1+\tan^2(y)} &= \\
+  \frac{1}{1+x^2} &=
+\end{aligned}
+\end{equation}
+
+\subsection{Differentiability}
+Suppose $f(x)$ is a function such that $\{c\} \in D_{f(x)}$. While
+differentiability at $x=c$ is an implication of continuity at $x=c$, the
+converse is not necessairly true. Continuity implies differentiability in the
+following scenarios:
+\begin{itemize}
+  \item $f(x)$ has normal behavior around $x=c$.
+\end{itemize}
+
+...but does not imply differentiability in the following scenarios:
+\begin{itemize}
+  \item $f(x)$ has a cusp at $x=c$.
+  \item $f(x)$ has a vertical "jump" at $x=c$.
+\end{itemize}
+
+To prove differentiability of $f$ at a point $x=c$, the following steps must be
+taken:
+\begin{enumerate}
+  \item $\lim_{x\to{c}} \frac{f(x)-f(c)}{x-c}$ must exist and "agree" from both
+    sides.
+\end{enumerate}
+
+\subsection{Inverse Functions}
+The derivative of an inverse function is defined:
+\begin{equation}
+  \frac{d}{dx}\left[f^{-1}(x)\right]=\frac{1}{f'(f^{-1}(x))}
+\end{equation}
+
+\section{Logarithmic and Exponential Functions}
+If it is impossible to differentiate or take the limit of a function w.r.t. $x$,
+it is sometimes useful to take the natural log of both sides such that
+L'Hopital's rule may be applied. An example is shown below:
+\begin{equation}
+  \begin{aligned}
+    L &= \lim_{x\to\infty} \left(1+\frac{1}{x}\right)^x \\
+    \ln{L} &= \ln{\lim_{x\to\infty} \left(1+\frac{1}{x}\right)^x} \\
+           &= \lim_{x\to\infty} \ln\left(\left(1+\frac{1}{x}\right)^x\right) \\
+           &= \lim_{x\to\infty} x\ln\left(1+\frac{1}{x}\right) \\
+           &= \lim_{x\to\infty} \frac{\ln\left(1+\frac{1}{x}\right)}{x^{-1}} \\
+           &= \lim_{x\to\infty} \frac{0}{0} \\
+           &= \lim_{x\to\infty} \frac{\frac{1}{1+\frac{1}{x}}x^{-2}}{-x^{-2}} \\
+           &= \lim_{x\to\infty} \frac{1}{1+\frac{1}{x}} \\
+           &= 1 \\
+    L &= e.
+  \end{aligned}
+\end{equation}
+
+\section{Derivates w.r.t Other Functions}
+As we have seen so far, functions can be differentiated with respect to a
+variable of that function (ex.: $f(x)$ and $\frac{d}{dx}(f(x))$).
+
+However, it is possible to differentiate a function with respect to another
+function. To differentiate a function $f(x)$ with respect to another function
+$g(x)$, the following equation is used:
+\begin{equation}
+  \frac{d[f(x)]}{d[g(x)]}=\frac{d[f(x)]/dt}{d[g(x)]/dt}
+\end{equation}
