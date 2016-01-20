@@ -1,6 +1,151 @@
 \chapter{Unit 3}
 \section{Related Rates}
+Related rates are a technique of differentiation that allows us to examine the
+rate of change of one quantity, with respect to the rate of change of several
+other quantitities.
+
+The process for using related rates in calculus is as follows:
+\begin{enumerate}
+  \item Identify all of the given quantities, and the quantities to be
+    determined.
+  \item Write an equation involving the variables whos rates of change are
+    given, or to be determined.
+  \item Use the Chain Rule to differentiate both sides of the equation with
+    respect to time.
+  \item Substitute all known values for rates of change into the original
+    equation.
+\end{enumerate}
+
+An example follows below:
+\textit{Air is being pumped into a spherical balloon at a rate of
+\SI{4.5}{\meter\cubed\per\minute}. Find the rate of change of the radius when the
+radius is \SI{2}{\meter}.}
+
+\begin{align*}
+  \frac{dV}{dt} &= \frac{9}{2} \\
+  \frac{dr}{dt} \text{when} r=2 \\
+  V &= \frac{4}{3}\pi{r^3} \\
+  \frac{dV}{dt} &= 4\pi{r^2}\frac{dr}{dt} \\
+  \frac{dr}{dt} &= \frac{1}{4\pi(2^2)}\frac{9}{2}
+\end{align*}
+
 \section{Application of Derivatives}
+\subsection{Extrema on an Interval}
+Definition of extrema:
+\begin{enumerate}
+  \item $f(c)$ is the minimum of $f$ on $I$ when $f(c) \leq f(x) \forall x \in
+    I$
+  \item $f(c)$ is the maximum of $f$ on $I$ when $f(c) \geq f(x) \forall x \in
+    I$
+\end{enumerate}
+
+\subsubsection{The Extreme Value Theorem}
+If $f$ is continuous on a closed interval $[a,b]$ then $f$ has both a minimum
+and a maximum on the closed interval.
+
+\subsubsection{Relative Extrema}
+\begin{enumerate}
+  \item If there is an open interval containing $c$ on which $f(c)$ is a
+    minimum then $f(c)$ is a relative minimum of $f$.
+  \item If there is an open interval containing $c$ on which $f(c)$ is a
+    maximum then $f(c)$ is a relative maximum of $f$.
+\end{enumerate}
+
+\subsubsection{Critical Number}
+If $f$ is defined at $c$ and $f'(c)=0$ or is undefined, then $c$ is a critical
+number of $f$.
+
+If $f$ has a relative minimum or relative maximum at $x=c$, then $c$ is a
+critical number of $f$.
+
+To find critical numbers of $f$ on $[a,b]$, use the following process:
+\begin{enumerate}
+  \item Find the critical numbers of $f$ on $(a,b)$.
+  \item Evaluate $f$ at each of those critical numbers.
+  \item Evaluate $f$ at each of the endpoints of $[a,b]$.
+  \item The least of these values is the minimum. The greatest is the maximum.
+\end{enumerate}
+
+\subsection{Rolle's Theorem \& Mean Value Theorem}
+\subsubsection{Rolle's Theorem}
+Let $f$ be a continuous function defined on a closed interval $[a,b]$. If
+$f(a)=f(b)$ then there is at least one $c\in(a,b)$ such that $f'(c)=0$.
+
+\subsubsection{Mean Value Theorem}
+Let $f$ be a continuous function defined $\forall{x}\in [a,b]$, and
+differentiable over $x\in(a,b)$. $c\in(a,b)\to f'(c)=\frac{f(b)-f(a)}{b-a}$.
+
+\subsection{Increasing and Decreasing Functions}
+Let $f$ be a function defined over some open interval. For all critical numbers,
+the following can be said about the function:
+\begin{description}
+  \item[$f'(x)>0$] $f(x)$ increasing
+  \item[$f'(x)<0$] $f(x)$ decreasing
+  \item[$f'(x)=0$] $f(x)$ constant
+\end{description}
+
+\subsubsection{First Derivative Test}
+\begin{enumerate}
+  \item If $f'(x)$ changes from negative to positive at $x=c$, then there is a
+    relative minumum on $f$ at $x=c$.
+  \item If $f'(x)$ changes from positive to negative at $x=c$, then there is a
+    relative maximum on $f$ at $x=c$.
+\end{enumerate}
+
+\subsection{Concavity}
+Let $f$ be differentiable on an open interval $I$. The graph of $f$ is concave
+upward on $I$ when $f'(x)$ is increasing on the interval and concave downward
+when $f'(x)$ is decreasing on the interval.
+
+\subsubsection{Test for Concavity}
+Let $f$ be a function whose second derivative exists $\forall{x}\in(a,b)$.
+\begin{description}
+  \item[$f''(x)>0\forall{x}\in{I}$] $f$ is concave upward on $I$.
+  \item[$f''(x)<0\forall{x}\in{I}$] $f$ is concave downward on $I$.
+\end{description}
+
+\subsection{Limits at Infinity}
+Horizontal asymptotes of a function can be determined when the limit of that
+function at a positive or negative $\infty$ is a value $L$.
+
+Let $L$ be a horizontal asymptote of a function $f$.
+\begin{equation}
+  L = \lim_{x\to\pm\infty} f(x)
+\end{equation}
+
+\subsection{Curve Sketching}
+To sketch a curve, implement the following process:
+
+\begin{enumerate}
+  \item determine the $x$-intercepts
+  \item determine the $y$-intercepts
+  \item Determine any vertical asymptotes by seeing where $f(x)$ becomes
+    undefined.
+  \item Determine any horizontal asymptotes by evaluating the limits at
+    $\pm\infty$.
+  \item Determine the critical numbers of the first derivative to sketch a
+    general curve of the graph.
+  \item Determine the critical numbers of the second derivative to determine
+    points of inflection.
+\end{enumerate}
+
 \section{Optimization}
+To optimize a problem, follow steps very similar to those described in the
+section on Related Rates.
+\begin{enumerate}
+  \item Set up a related rates problem.
+  \item Determine the feasiable domain of the problem.
+  \item Evaluate the function.
+  \item Determine critical numbers to find the relative maximum or minimum.
+\end{enumerate}
+
 \section{Newton's Method}
+Newton's method is a convenient way to determine the zeros of a function. To
+solve for a zero using Newton's method, use the following process:
+\begin{enumerate}
+  \item Make an initial estimate $x_1$ that is close to $c$.
+  \item Determine $x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}$.
+  \item See step 2.
+\end{enumerate}
+
 \section{Differentials}
