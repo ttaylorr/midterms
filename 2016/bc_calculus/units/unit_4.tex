@@ -1,2 +1,51 @@
 \chapter{Unit 4}
+\section{First Fundamental Theorem of Calculus}
+Let $f$ be a function defined $\forall x\in[a,b]$. Let $F$ be the antiderivative
+of $f$ on $[a,b]$. It can be said that:
+\begin{equation}
+  \int_{a}^{b} f(x) dx = F(b) - F(a)
+\end{equation}
 
+\subsection{The Mean Value Theorem}
+If $f$ is continuous on the closed interval $[a,b]$, then there exists a number
+$x=c$ such that:
+\begin{equation}
+  \int_{a}^{b} f(x)dx = f(c)(b-a)
+\end{equation}
+
+\section{Second Fundamental Theorem of Calculus}
+\begin{equation}
+  \frac{d}{dx}\left[\int_a^x f(t) dt\right]=f(x)
+\end{equation}
+
+\begin{equation}
+  \frac{d}{dx}\left[ \int_a^{u(x)} f(t) dt\right] = f(u(x))\frac{du}{dx}
+\end{equation}
+
+\section{Sigma Limit Process}
+Let $c_i = a+i(\Delta{x})$, and $\Delta{x}=\frac{b-a}{n}$.
+
+\begin{equation}
+  \int_a^b f(x) dx = \lim_{\Delta x\to 0} \sum_{i=1}^{n}f(c_i)\Delta{x_i}
+\end{equation}
+
+\section{Logarithmic \& Exponential Functions}
+\begin{equation}
+  \int \frac{du}{u} = \ln|u| + C
+\end{equation}
+
+\begin{equation}
+  \int e^u dx = du * e^u + C
+\end{equation}
+
+\section{Differential Equations}
+\begin{equation}
+  y=Ce^{kt}
+\end{equation}
+
+\section{Inverse Trigonometric Functions}
+\begin{align}
+  \int \frac{1}{a^2+u^2} du = \frac{1}{a}\arctan{\frac{u}{a}} + C \\
+  \int \frac{1}{\sqrt{a^2-u^2}} du = \arcsin{\frac{u}{a}} + C &&
+  \int \frac{1}{u\sqrt{u^2-a^2}} du = \frac{1}{a}\arcsec{\frac{|u|}{a}} + C
+\end{align}
