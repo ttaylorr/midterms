@@ -1,1 +1,72 @@
 \chapter{Unit 6}
+\section{Integration by Parts}
+To integrate using parts, pick a $u$ and a $dv$ from the origianl integral. The
+$dv$ ideally should be something that is easy to integrate, while the $u$ should
+be easy to differentiate.
+
+Once selected, simply apply the formula to yield your answer. You may have to do
+parts more than once, or have the recursive case where the original integral
+comes up again, and you have to move it to one side.
+
+\begin{equation}
+  \int u dv = uv - \int v du
+\end{equation}
+
+\section{Powers of Trigonometric Expressions}
+\subsection{$\int \cos^n\theta\sin^m\theta d\theta$}
+\begin{description}
+  \item[$n$ or $m$ odd] convert all but one of that function to the other using
+    a trigonometric identity. The remaining power is the $d\theta$.
+  \item[$n$, $m$ both even] use a power reducing formula.
+\end{description}
+
+\subsection{$\int \sec^n\theta\tan^m\theta d\theta$}
+\begin{description}
+  \item[$n$ is even] convert all but one $\sec^2\theta$ to $\tan$s using a
+    trigonometric identity. The remaining $\sec^2\theta$ will be your $d\theta$.
+  \item[$n$ is odd] convert all but one to $\sec\theta$, saving a
+    $\sec\theta\tan\theta$.
+  \item[$n=0$, $m$ is anything] convert one $\tan^2\theta$ to $\sec^2\theta-1$
+\end{description}
+
+\subsection{Base-case}
+If the trigonometric power expression you have is none of the above, you have to
+convert everything to $\sin$s and $\cos$s and simplify from there.
+
+\section{Triginometric Substitution}
+You can substitute three cases of integrals into a triangle and then simplify
+in terms of $\theta$. Integrate with respect to $d\theta$ and then convert your
+answer back in terms of $x$, $y$, or $z$ using the original triangle.
+
+\begin{align}
+  \sqrt{a^2-u^2} &\to \sin\theta = \frac{u}{a} \\
+  \sqrt{a^2+u^2} &\to \tan\theta = \frac{u}{a} \\
+  \sqrt{u^2-a^2} &\to \sec\theta = \frac{u}{a}
+\end{align}
+
+\section{Partial Fractions}
+If you have a integral where the denominator is factorable (or can be split to
+become factorable) then you can use partial fractions.
+
+\begin{equation}
+  \int \frac{p(x)}{q(x)} dx = \int {\frac{A}{x}+\frac{B}{(x+1)}+\ldots\; } dx
+\end{equation}
+
+There are a few rules when dealing with expanding the denominator to use partial
+fractions.
+\begin{itemize}
+  \item If you have a factor in the form $(px^2+q)$, the numerator is in the
+    form $(Ax+B)$.
+  \item If you have a factor in the form $(px+q)$ then then numerator is in the
+    form of $A$.
+\end{itemize}
+
+To solve...
+\begin{enumerate}
+  \item Make the denominator factor-able.
+  \item Break apart the partial fraction.
+  \item Create the basic equation.
+  \item Isolate terms by power.
+  \item Solve the system.
+  \item Integrate each part.
+\end{enumerate}
