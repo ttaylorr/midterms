@@ -1,1 +1,115 @@
 \chapter{Unit 5}
+\section{Area Between Two Curves}
+Let $f(x)$ and $g(x)$ both be curves defined $\forall{x}\in[a,b]$. Let $A$ be
+the area between these two curves.
+
+We must always assume that $f(x)$ is the larger curve between the two. Should
+this change, you must split the integral.
+
+\begin{align}
+  A &= \int_a^b [f(x)-g(x)] dx \\
+    &= \int_c^d [f(y)-g(y)] dy
+\end{align}
+
+\section{Volume: The Disk Method}
+\subsection{Disks}
+\begin{align}
+  V &= \int_a^b A(x) dx \\
+    &= \pi\int_a^b [r(x)]^2 dx
+\end{align}
+
+\subsection{Washers}
+\begin{align}
+  V &= \int_a^b A(x) dx \\
+    &= \int_a^b \pi(R^2-r^2) dx \\
+    &= \pi\int_a^b (R^2-r^2) dx
+\end{align}
+
+\section{Volume: The Shell Method}
+Let $r(x)$ be the distance of the slice to the axis of revolution, and $h(x)$ be
+the width or height of that slice.
+
+\begin{equation}
+  V = 2\pi\int_a^b r(x)h(x) dx
+\end{equation}
+
+\section{Arc Length}
+Let $L$ be the arc-length of a curve defined over an interval $[a,b]$.
+
+\begin{equation}
+  L_{\text{arc}} = \int_a^b \sqrt{1+[f'(x)]^2} dx
+\end{equation}
+
+\subsection{Surfaces}
+Let $r(x)$ be the distance from the rotating arc to the axis of rotation.
+
+\begin{equation}
+  S_{\text{rev}} = 2\pi\int_a^b r(x)\sqrt{1+[f'(x)]^2} dx
+\end{equation}
+
+\section{Work}
+\begin{align}
+  W &= \vec{F}\cdot{\vec{D}}=FD\cos\theta \\
+    &= \int_a^b F(x) dx
+\end{align}
+
+\subsection{Springs}
+Some work has a special definition. For example, springs follow Hooke's Law:
+\begin{equation}
+  F=kd
+\end{equation}
+
+\subsection{Slabs of Liquid}
+\begin{align}
+  \Delta F &= \text{Volume} \cdot \text{Density} \\
+           &= A\Delta{y}\rho \\
+  \Delta W &= \Delta{F}\cdot x
+\end{align}
+
+\subsection{Chains and Lifting}
+\begin{align}
+  W &= W_c + W_{nc} \\
+    &= (\text{weight}\cdot\text{distance}) + (\lambda{d}\Delta{d}) + \int_a^b
+  \lambda(h-y) dy
+\end{align}
+
+\section{Moments, Centers of Mass}
+\subsection{Discrete, Linear Systems}
+\begin{equation}
+  M_O = \frac{\sum_{i=1}^{n} m_ix_i}{\sum_{i=1}^n m_i}
+\end{equation}
+
+\subsection{Two-Dimensional Systems}
+\begin{equation}
+  M_y = \sum_{i=1}^{n} m_ix_i
+\end{equation}
+
+\begin{equation}
+  M_x = \sum_{i=1}^{n} m_iy_i
+\end{equation}
+
+\begin{equation}
+  (\bar{x}, \bar{y}) = \left( \frac{M_y}{m}, \frac{M_x}{m} \right)
+\end{equation}
+
+\subsection{Planar Lamina}
+\begin{align}
+  m &= Da \\
+    &= \int_a^b \rho(x)[f(x)-g(x)] dx
+\end{align}
+
+\begin{equation}
+  M_x = \int_a^b \rho(x)\left[ \frac{f(x)+g(x)}{2} \right]\left[ f(x)-g(x) \right] dx
+\end{equation}
+
+\begin{equation}
+  M_y = \int_a^b \rho(x)\left[ f(x)-g(x) \right] dx
+\end{equation}
+
+\section{Fluid Pressure and Force}
+\begin{description}
+  \item[Pressure] $P=wh$
+  \item[Force] $F=PA=whA$
+  \item[Pascal's Principle] pressure exerted by a fluid at a depth h is
+    transmitted equally in all directions.
+\end{description}
